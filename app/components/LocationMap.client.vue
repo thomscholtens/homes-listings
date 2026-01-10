@@ -12,7 +12,7 @@ const { latitude, longitude } = defineProps<LocationMapProps>();
 const MAP_ZOOM = 13;
 
 let map: leaflet.Map | null = null;
-const mapEl = useTemplateRef('map');
+const mapEl = useTemplateRef('mapEl');
 
 onMounted(async () => {
   await nextTick();
@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div
-    ref="map"
+    ref="mapEl"
     class="map"
   />
 </template>
