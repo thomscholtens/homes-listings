@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [svgLoader()]
   },
+  image: {
+    domains: ['cloud.funda.nl']
+  },
   eslint: {
     config: {
       nuxt: { sortConfigKeys: false },
