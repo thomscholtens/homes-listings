@@ -1,0 +1,8 @@
+{
+  "prettier.enable": false,
+  "[typescript][vue]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  },
+}
