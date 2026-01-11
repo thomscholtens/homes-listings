@@ -62,7 +62,7 @@ p {
 .image {
   border-radius: var(--border-radius);
   width: 100%;
-  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 
@@ -83,10 +83,6 @@ p {
 @container (width > 450px) {
   .listing-card {
     grid-template-columns: 228px 1fr;
-  }
-
-  .image {
-    height: 152px;
   }
 }
 </style>
