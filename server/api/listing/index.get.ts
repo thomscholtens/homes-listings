@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     const response = await $fetch<ListingPageResponse>(
-      `${runtimeConfig.public.apiBase}/${runtimeConfig.apiKey}/?type=koop`,
+      `${runtimeConfig.public.apiBase}/feeds/Aanbod.svc/json/${runtimeConfig.apiKey}/?type=koop`,
     );
     return response;
   }

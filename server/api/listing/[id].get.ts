@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     return await $fetch<ListingDetailResponse>(
-      `${runtimeConfig.public.apiBase}/detail/${runtimeConfig.apiKey}/koop/${listingId}`,
+      `${runtimeConfig.public.apiBase}/feeds/Aanbod.svc/json/detail/${runtimeConfig.apiKey}/koop/${listingId}`,
     );
   }
   catch (error: unknown) {
