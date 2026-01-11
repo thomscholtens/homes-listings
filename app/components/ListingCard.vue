@@ -11,7 +11,7 @@ defineProps<ListingCardProps>();
     class="listing-card"
   >
     <NuxtLink
-      :to="`/${listing.id}`"
+      :to="`/detail/${listing.id}`"
       class="image-container"
     >
       <NuxtImg
@@ -24,7 +24,7 @@ defineProps<ListingCardProps>();
       />
     </NuxtLink>
     <div class="content">
-      <NuxtLink :to="`/${listing.id}`">
+      <NuxtLink :to="`/detail/${listing.id}`">
         <h2 class="address">{{ listing.address }}</h2>
       </NuxtLink>
       <p>{{ listing.postalCode }} {{ listing.city }}</p>

@@ -38,6 +38,7 @@ const otherPhotos = computed(() => photos.slice(1, 5));
           fetchpriority="high"
           :src="firstPhoto.url"
           :width="574"
+          placeholder
           :height="448"
           :alt="firstPhoto.alt"
           format="webp"
@@ -54,6 +55,7 @@ const otherPhotos = computed(() => photos.slice(1, 5));
         <NuxtImg
           :src="photo.url"
           :alt="photo.alt"
+          placeholder
           :width="276"
           :height="246"
           format="webp"

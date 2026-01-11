@@ -24,6 +24,10 @@ export default defineNuxtConfig({
   image: {
     domains: ['cloud.funda.nl']
   },
+  routeRules: {
+    '/': { swr: 300 },
+    '/detail/**': { swr: 900 },
+  },
   eslint: {
     config: {
       nuxt: { sortConfigKeys: false },
