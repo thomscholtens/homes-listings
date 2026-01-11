@@ -9,38 +9,34 @@ if (error.value) {
     statusMessage: error.value.statusMessage || 'Error fetching listing',
   });
 }
+
+useSeoMeta({
+  title: `For sale: ${listing.value?.Adres}`,
+  description: `For sale: ${listing.value?.Adres}`,
+});
 </script>
 
 <template>
-  <div class="container">
-    <NuxtLink to="/">Back to overview</NuxtLink>
-    <div>
-      <PhotoGallery
-        :photos="mapMultipleMediaToGalleryPhotos(listing?.Media || [])"
-      />
-    </div>
-    <div class="listing-content">
-      <div class="listing-information">
-        <h1 class="h2">
-          {{ listing?.Adres }}
-        </h1>
-        <div
-          class="text-large text-bold"
-          v-html="listing?.PrijsGeformatteerd"
-        />
-        <div>
-          <h2 class="h3">
-            Description
-          </h2>
-          <p class="text-small">
-            {{ listing?.VolledigeOmschrijving }}
-          </p>
-        </div>
-      </div>
+  <section class="section">
+    <div class="container">
       <div>
-        <h2 class="h3">
-          Location
-        </h2>
+        <PhotoGallery
+          :photos="mapMultipleMediaToGalleryPhotos(listing?.Media || [])"
+        />
+      </div>
+      <div class="listing-content">
+        <div class="listing-information">
+          <div class="heading">
+            <h1 class="h2">
+              {{ listing?.Adres }}
+            </h1>
+            <p>{{ `${listing?.Postcode} ${listing?.Plaats}` }}</p>
+          </div>
+          <div
+            class="text-large text-bold"
+            v-html="listing?.PrijsGeformatteerd"
+          />
+        </div>
         <LocationMap
           v-if="listing"
           :longitude="listing.WGS84_X"
@@ -48,20 +44,19 @@ if (error.value) {
         />
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
+  .heading {
+    margin-block-end: 1rem;;
+  }
+
   .listing-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .listing-information {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    margin-block-start: 2rem;
+    row-gap: 1rem;
   }
 
   @media (width > 768px) {

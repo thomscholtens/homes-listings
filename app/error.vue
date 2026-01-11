@@ -1,10 +1,12 @@
 <template>
-  <div class="container">
-    <NuxtLayout>
-      <h2>{{ error.statusCode }}</h2>
-      <p>{{ error.statusMessage }}</p>
-    </NuxtLayout>
-  </div>
+  <NuxtLayout>
+    <section class="section">
+      <div class="container">
+        <h2>{{ error.statusCode }}</h2>
+        <p>{{ error.statusMessage }}</p>
+      </div>
+    </section>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">

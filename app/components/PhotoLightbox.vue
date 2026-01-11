@@ -61,10 +61,14 @@ function closeLightbox() {
               :key="index"
             >
               <div class="swiper-zoom-container">
-                <img
+                <NuxtImg
+                  format="webp"
+                  loading="lazy"
+                  :width="1080"
+                  :height="720"
                   :src="photo.url"
                   :alt="photo.alt || `Photo ${index + 1}`"
-                >
+                />
               </div>
             </SwiperSlide>
           </Swiper>
@@ -81,7 +85,7 @@ function closeLightbox() {
   left: 0;
   width: 100dvw;
   height: 100dvh;
-  background: rgba(255, 255, 255, 0.95);
+  background: oklch(from var(--color-white) l c h / 0.95);
   backdrop-filter: blur(8px);
   z-index: 9999;
   display: flex;
@@ -101,7 +105,7 @@ function closeLightbox() {
   width: 3rem;
   height: 3rem;
   border: none;
-  background: rgba(255, 255, 255, 0.1);
+  background: oklch(from var(--color-white) l c h / 0.1);
   color: var(--color-black);
   cursor: pointer;
   border-radius: 50%;
@@ -114,7 +118,7 @@ function closeLightbox() {
 }
 
 .close-button:hover {
-  background: rgba(0, 0, 0, 0.2);
+  background: oklch(from var(--color-black) l c h / 0.2);
 }
 
 .close-button svg {

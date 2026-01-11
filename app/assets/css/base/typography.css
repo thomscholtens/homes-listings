@@ -39,8 +39,8 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-tight);
-  color: var(--color-heading, #000);
-  margin: 0 0 1rem;
+  color: var(--color-black);
+  margin: 0;
 }
 
 .h1 {
@@ -66,6 +66,10 @@
 .h6 {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
+}
+
+p {
+  margin: 0;
 }
 
 /* Text Utilities */

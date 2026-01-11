@@ -35,6 +35,7 @@ const otherPhotos = computed(() => photos.slice(1, 5));
         @click="openLightbox(0)"
       >
         <NuxtImg
+          fetchpriority="high"
           :src="firstPhoto.url"
           :width="574"
           :height="448"
@@ -47,7 +48,7 @@ const otherPhotos = computed(() => photos.slice(1, 5));
         :key="photo.url"
         type="button"
         :aria-label="`Open photo ${index + 2}`"
-        class="grid-item grid-item--small"
+        class="grid-item"
         @click="openLightbox(index + 1)"
       >
         <NuxtImg
@@ -60,12 +61,14 @@ const otherPhotos = computed(() => photos.slice(1, 5));
       </button>
     </div>
     <!-- Lazy load this component to improve performance. These photos should only be loaded when the lightbox is opened. -->
-    <LazyPhotoLightbox
-      :photos="photos"
-      :is-open="isLightboxOpen"
-      :initial-slide="initialSlide"
-      @close="closeLightbox"
-    />
+    <ClientOnly>
+      <LazyPhotoLightbox
+        :photos="photos"
+        :is-open="isLightboxOpen"
+        :initial-slide="initialSlide"
+        @close="closeLightbox"
+      />
+    </ClientOnly>
   </div>
 </template>
 
@@ -98,6 +101,7 @@ const otherPhotos = computed(() => photos.slice(1, 5));
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: var(--border-radius);
 }
 
 .grid-item--large {
