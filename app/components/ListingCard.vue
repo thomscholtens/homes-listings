@@ -63,6 +63,7 @@ p {
   border-radius: var(--border-radius);
   width: 100%;
   aspect-ratio: 3 / 2;
+  height: auto;
   object-fit: cover;
 }
 
