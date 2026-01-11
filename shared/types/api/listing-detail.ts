@@ -3,33 +3,33 @@ export interface ListingDetailResponse {
   AangebodenSindsTekst: string;
   AantalBadkamers: number;
   AantalKamers: number;
-  AantalSlaapkamers: any;
+  AantalSlaapkamers: unknown;
   AantalWoonlagen: string;
   Aanvaarding: string;
   Adres: string;
-  AfgekochtDatum: any;
-  BalkonDakterras: any;
-  BedrijfsruimteCombinatieObject: any;
+  AfgekochtDatum: unknown;
+  BalkonDakterras: unknown;
+  BedrijfsruimteCombinatieObject: unknown;
   BezichtingDagdelen: BezichtingDagdelen[];
   BezichtingDagen: BezichtingDagen[];
-  BijdrageVVE: any;
-  Bijzonderheden: any;
+  BijdrageVVE: unknown;
+  Bijzonderheden: unknown;
   Bouwjaar: string;
   Bouwvorm: string;
   BronCode: string;
-  ContactpersoonEmail: any;
-  ContactpersoonTelefoon: any;
+  ContactpersoonEmail: unknown;
+  ContactpersoonTelefoon: unknown;
   Cv: string;
-  DatumOndertekeningAkte: any;
-  Deeplink: any;
+  DatumOndertekeningAkte: unknown;
+  Deeplink: unknown;
   DetailInfo: DetailInfo;
-  EigendomsSituatie: any;
+  EigendomsSituatie: unknown;
   Energielabel: Energielabel;
-  ErfpachtBedrag: any;
+  ErfpachtBedrag: unknown;
   Garage: string;
-  GarageIsolatie: any;
+  GarageIsolatie: unknown;
   GarageVoorzieningen: string;
-  GelegenOp: any;
+  GelegenOp: unknown;
   GewijzigdDatum: string;
   HoofdFoto: string;
   HoofdFotoSecure: string;
@@ -52,31 +52,31 @@ export interface ListingDetailResponse {
   Isolatie: string;
   Kenmerken: Kenmerken[];
   KenmerkenKort: KenmerkenKort;
-  KenmerkenTitel: any;
+  KenmerkenTitel: unknown;
   Ligging: string;
   MLIUrl: string;
   Makelaar: string;
   MakelaarId: number;
   MakelaarTelefoon: string;
-  MedeAanbieders: any[];
+  MedeAanbieders: unknown[];
   Media: Media[];
   'Media-Foto': string[];
   MobileURL: string;
   ObjectType: string;
   ObjectTypeMetVoorvoegsel: string;
-  OpenHuizen: any[];
+  OpenHuizen: unknown[];
   PerceelOppervlakte: number;
   PermanenteBewoning: string;
   Plaats: string;
   Postcode: string;
   Prijs: Prijs;
   PrijsGeformatteerd: string;
-  Project: any;
-  ProjectNaam: any;
+  Project: unknown;
+  ProjectNaam: unknown;
   PublicatieDatum: string;
   PublicatieStatus: number;
   SchuurBerging: string;
-  SchuurBergingIsolatie: any;
+  SchuurBergingIsolatie: unknown;
   SchuurBergingVoorzieningen: string;
   ScrambledId: string;
   ServiceKosten: number;
@@ -91,39 +91,39 @@ export interface ListingDetailResponse {
   ToonBrochureAanvraag: boolean;
   ToonMakelaarWoningaanbod: boolean;
   ToonReageren: boolean;
-  TransactieAfmeldDatum: any;
-  TransactieMakelaarId: any;
-  TransactieMakelaarNaam: any;
+  TransactieAfmeldDatum: unknown;
+  TransactieMakelaarId: unknown;
+  TransactieMakelaarNaam: unknown;
   TuinLigging: string;
   TypeProject: number;
   URL: string;
   Veiling: Veiling;
   VerkoopStatus: string;
   Verwarming: string;
-  Video: any;
+  Video: unknown;
   VolledigeOmschrijving: string;
   Voorzieningen: string;
   WGS84_X: number;
   WGS84_Y: number;
   WarmWater: string;
   WoonOppervlakte: number;
-  EersteHuurPrijs: any;
-  EersteHuurPrijsLang: any;
-  EersteKoopPrijs: any;
-  EersteKoopPrijsLang: any;
-  HuurPrijs: any;
-  HuurPrijsLang: any;
-  HuurPrijsTot: any;
-  Huurprijs: any;
-  HuurprijsFormaat: any;
+  EersteHuurPrijs: unknown;
+  EersteHuurPrijsLang: unknown;
+  EersteKoopPrijs: unknown;
+  EersteKoopPrijsLang: unknown;
+  HuurPrijs: unknown;
+  HuurPrijsLang: unknown;
+  HuurPrijsTot: unknown;
+  Huurprijs: unknown;
+  HuurprijsFormaat: unknown;
   KoopPrijs: number;
   KoopPrijsLang: string;
   Koopprijs: number;
   KoopprijsFormaat: string;
-  KoopprijsTot: any;
+  KoopprijsTot: unknown;
   ShortURL: string;
   Tuin: string;
-  VeilingGeformatteerd: any;
+  VeilingGeformatteerd: unknown;
 }
 
 export interface BezichtingDagdelen {
@@ -140,20 +140,20 @@ export interface DetailInfo {
   HasPromotionLabel: boolean;
   PromotionLabelType: number;
   RibbonColor: number;
-  RibbonText: any;
+  RibbonText: unknown;
   Tagline: string;
 }
 
 export interface Energielabel {
   Definitief: boolean;
-  Index: any;
+  Index: unknown;
   Label: string;
   NietBeschikbaar: boolean;
   NietVerplicht: boolean;
 }
 
 export interface Kenmerken {
-  Ad: any;
+  Ad: unknown;
   Kenmerken: Kenmerken2[];
   LokNummer: number;
   SubKenmerk?: SubKenmerk;
@@ -169,25 +169,25 @@ export interface Kenmerken2 {
 
 export interface SubKenmerk {
   Ad: string;
-  Kenmerken: any[];
+  Kenmerken: unknown[];
   LokNummer: number;
-  SubKenmerk: any;
+  SubKenmerk: unknown;
   Titel: string;
 }
 
 export interface KenmerkenKort {
-  Ad: any;
+  Ad: unknown;
   Kenmerken: Kenmerken3[];
   LokNummer: number;
-  SubKenmerk: any;
-  Titel: any;
+  SubKenmerk: unknown;
+  Titel: unknown;
 }
 
 export interface Kenmerken3 {
   Naam: string;
-  NaamCss: any;
+  NaamCss: unknown;
   Waarde: string;
-  WaardeCss: any;
+  WaardeCss: unknown;
 }
 
 export interface Media {
@@ -211,16 +211,16 @@ export interface MediaItem {
 }
 
 export interface Prijs {
-  GeenExtraKosten: any;
+  GeenExtraKosten: unknown;
   HuurAbbreviation: string;
-  Huurprijs: any;
+  Huurprijs: unknown;
   HuurprijsOpAanvraag: string;
-  HuurprijsTot: any;
+  HuurprijsTot: unknown;
   KoopAbbreviation: string;
   Koopprijs: number;
   KoopprijsOpAanvraag: string;
-  KoopprijsTot: any;
-  OriginelePrijs: any;
+  KoopprijsTot: unknown;
+  OriginelePrijs: unknown;
   VeilingText: string;
 }
 
@@ -230,8 +230,8 @@ export interface Titel {
 }
 
 export interface Veiling {
-  EindDatum: any;
-  Link: any;
-  StartDatum: any;
-  VeilingPartij: any;
+  EindDatum: unknown;
+  Link: unknown;
+  StartDatum: unknown;
+  VeilingPartij: unknown;
 }

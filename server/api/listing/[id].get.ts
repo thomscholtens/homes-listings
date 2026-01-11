@@ -1,3 +1,5 @@
+import type { ListingDetailResponse } from '#shared/types/api/listing-detail';
+
 import { FetchError } from 'ofetch';
 
 export default defineEventHandler(async (event) => {

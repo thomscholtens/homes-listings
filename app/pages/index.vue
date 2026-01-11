@@ -10,19 +10,7 @@ if (error.value) {
 
 const listings = computed<Listing[]>(() => {
   if (!data.value?.Objects) return [];
-
-  return data.value.Objects.map(obj => ({
-    id: obj.Id,
-    photo: {
-      url: obj.FotoMedium,
-      alt: obj.Adres,
-    },
-    address: obj.Adres,
-    postalCode: obj.Postcode,
-    city: obj.Woonplaats,
-    priceHtml: obj.PrijsGeformatteerdHtml,
-    realtorName: obj.MakelaarNaam,
-  }));
+  return mapApiObjectsToListings(data.value.Objects);
 });
 
 useSeoMeta({
