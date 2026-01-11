@@ -59,6 +59,7 @@ const otherPhotos = computed(() => photos.slice(1, 5));
         />
       </button>
     </div>
+    <!-- Lazy load this component to improve performance. These photos should only be loaded when the lightbox is opened. -->
     <LazyPhotoLightbox
       :photos="photos"
       :is-open="isLightboxOpen"

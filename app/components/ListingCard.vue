@@ -10,7 +10,10 @@ defineProps<ListingCardProps>();
   <div
     class="listing-card"
   >
-    <NuxtLink :to="`/${listing.id}`">
+    <NuxtLink
+      :to="`/${listing.id}`"
+      class="image-container"
+    >
       <NuxtImg
         class="image"
         :src="listing.photo.url"
@@ -52,6 +55,10 @@ p {
   margin: 0;
 }
 
+.image-container {
+  display: block;
+}
+
 .image {
   border-radius: var(--border-radius);
   width: 100%;
@@ -76,7 +83,7 @@ p {
 
 @container (width > 450px) {
   .listing-card {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 228px 1fr;
   }
 }
 </style>
