@@ -27,6 +27,8 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { swr: 300 },
     '/detail/**': { swr: 900 },
+    '/api/listing': { swr: 300 },
+    '/api/listing/**': { swr: 900 },
   },
   eslint: {
     config: {
