@@ -20,15 +20,33 @@ if (error.value) {
       />
     </div>
     <div class="listing-content">
-      <div>
-        <h1>{{ listing?.Adres }}</h1>
-        <p>{{ listing?.VolledigeOmschrijving }}</p>
+      <div class="listing-information">
+        <h1 class="h2">
+          {{ listing?.Adres }}
+        </h1>
+        <div
+          class="text-large text-bold"
+          v-html="listing?.PrijsGeformatteerd"
+        />
+        <div>
+          <h2 class="h3">
+            Description
+          </h2>
+          <p class="text-small">
+            {{ listing?.VolledigeOmschrijving }}
+          </p>
+        </div>
       </div>
-      <LocationMap
-        v-if="listing"
-        :longitude="listing.WGS84_X"
-        :latitude="listing.WGS84_Y"
-      />
+      <div>
+        <h2 class="h3">
+          Location
+        </h2>
+        <LocationMap
+          v-if="listing"
+          :longitude="listing.WGS84_X"
+          :latitude="listing.WGS84_Y"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -36,7 +54,19 @@ if (error.value) {
 <style scoped>
   .listing-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .listing-information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (width > 768px) {
+    .listing-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>

@@ -1,0 +1,11 @@
+:root {
+  --color-white: oklch(1 0 0);
+  --color-black: oklch(0.3211 0 0);
+  --color-gray: oklch(0.9276 0.0058 264.53);
+
+  --color-primary: oklch(0.7761 0.1679 63.65); 
+  --color-secondary: oklch(0.5301 0.133457 245.0068);
+
+  --border-radius: 0.5rem;
+}
+

@@ -1,4 +1,5 @@
-@import './base/variables.css';
+@import './base/colors.css';
+@import './base/typography.css';
 @import './base/global.css';
 
-@import './layout/grid.css';
+@import './layout/containers.css';

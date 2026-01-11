@@ -32,7 +32,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="container">
-    <ListingGrid :listings="listings" />
-  </div>
+  <section class="section">
+    <div class="container">
+      <ListingGrid :listings="listings" />
+    </div>
+  </section>
 </template>

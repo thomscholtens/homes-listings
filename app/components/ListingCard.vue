@@ -12,6 +12,7 @@ defineProps<ListingCardProps>();
   >
     <NuxtLink :to="`/${listing.id}`">
       <NuxtImg
+        class="image"
         :src="listing.photo.url"
         :alt="listing.photo.alt"
         format="webp"
@@ -19,23 +20,27 @@ defineProps<ListingCardProps>();
         height="152"
       />
     </NuxtLink>
-    <div>
+    <div class="content">
       <NuxtLink :to="`/${listing.id}`">
         <h2 class="address">{{ listing.address }}</h2>
       </NuxtLink>
       <p>{{ listing.postalCode }} {{ listing.city }}</p>
-      <div v-html="listing.priceHtml" />
+      <div
+        class="price"
+        v-html="listing.priceHtml"
+      />
       <p>{{ listing.realtorName }}</p>
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .listing-card {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  border: 1px solid red;
+  padding-block-end: 0.75rem;
+  border-bottom: 1px solid var(--color-gray);
 }
 
 a {
@@ -47,9 +52,26 @@ p {
   margin: 0;
 }
 
+.image {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.content {
+  margin-block: auto;
+}
+
 .address {
   font-size: 1.25rem;
+  color: var(--color-secondary);
   margin: 0;
+}
+
+.price {
+  font-weight: bold;
 }
 
 @container (width > 450px) {
